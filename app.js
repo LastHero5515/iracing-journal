@@ -23,7 +23,8 @@ overview(){const s=J.stats,c=s.career,ses=J.mugello.sessions,last=ses[ses.length
   <div class="card teal"><div class="k">iRating</div><div class="v">${s.iRating}</div><div class="note">на ${s.date} · ${s.season}</div></div>
   <div class="card teal"><div class="k">Safety Rating</div><div class="v">${s.sr} <small>${s.licenseClass}</small></div><div class="note">ttRating ${s.ttRating} · на ${s.date}</div></div>
  </div>
- <div class="insight">Ключевой вывод: <span>средний чистый круг и стабильность важнее лучшего круга.</span> Последняя сессия (${last.date}): лучший ${last.best}, средний ${last.avg} (σ ${last.sigma}), ${last.inc} инцидентов в чистой серии.</div>
+ <div class="insight">Ключевой вывод: <span>средний чистый круг и стабильность важнее лучшего круга.</span> Последняя сессия (${J.latest.date}, ${J.latest.setup}, ${J.latest.line}): лучший ${last.best} (с инцидентом), лучший чистый ${last.bestClean}, средний чистый ${last.avg} (σ ${last.sigma}), инцидентов ${last.inc}.</div>
+ <h2>To-do от тренера</h2><div class="card">${J.todo.map(t=>`<div class="goal"><span class="dot ${t.warn?'now':'next'}"></span><div style="flex:1">${t.warn?'⚠️ ':''}${t.text}</div>${t.warn?'<span class="tag off">не сделано</span>':''}</div>`).join('')}</div>
  <div class="grid g2">
   <div><h2>Лучший круг по трассам</h2><table><tr><th>Трасса</th><th>Лучший</th><th>Примечание</th></tr>
    ${J.bestLaps.map(b=>`<tr><td>${b.track}</td><td class="n">${b.best||'—'}</td><td>${b.best?b.note:'<span class="note">ещё не ездил / данные появятся</span>'}</td></tr>`).join('')}</table></div>
@@ -36,7 +37,7 @@ overview(){const s=J.stats,c=s.career,ses=J.mugello.sessions,last=ses[ses.length
 progress(){const S=J.mugello.sessions;
  app.innerHTML=H('Прогресс · Mugello',`${J.car} · 5191 м · данные тренера`)+`
  <table><tr><th>Дата</th><th>Driving Line</th><th>Лучший круг</th><th>Средний чистый</th><th>σ, с</th><th>Инциденты</th><th>Примечание</th></tr>
- ${S.map(s=>`<tr><td>${s.date}</td><td><span class="tag ${s.drivingLine?'on':'off'}">${s.drivingLine?'с линией':'без линии'}</span></td><td class="n">${s.best}</td><td class="n">${s.avg||'—'}</td><td class="n">${s.sigma??'—'}</td><td class="n">${s.inc??'—'}</td><td class="note">${s.note||''}</td></tr>`).join('')}</table>
+ ${S.map(s=>`<tr><td>${s.date}</td><td><span class="tag ${s.drivingLine?'on':'off'}">${s.lineLabel||(s.drivingLine?'с линией':'без линии')}</span></td><td class="n">${s.best}</td><td class="n">${s.avg||'—'}</td><td class="n">${s.sigma??'—'}</td><td class="n">${s.inc??'—'}</td><td class="note">${s.note||''}</td></tr>`).join('')}</table>
  <h2>Лучший и средний круг по сессиям</h2><div class="chartbox" id="c1"></div>
  <div class="note">Пунктир: baseline с линией ${J.mugello.baseline} и цель ~1:49.000. Чем ниже — тем быстрее.</div>
  <h2>Заметки</h2><ul class="list">${J.progressNotes.map(n=>`<li class="${n.type}">${n.text}</li>`).join('')}</ul>
@@ -45,6 +46,7 @@ progress(){const S=J.mugello.sessions;
  chart(document.getElementById('c1'),{type:'line',data:{labels:L,datasets:[
   {label:'Лучший круг',data:S.map(s=>toS(s.best)),borderColor:'#ff4d1f',backgroundColor:'#ff4d1f',tension:.2,pointRadius:5},
   {label:'Средний чистый',data:S.map(s=>toS(s.avg)),borderColor:'#18c3b1',backgroundColor:'#18c3b1',tension:.2,pointRadius:5,spanGaps:true},
+  {label:'Лучший чистый',data:S.map(s=>toS(s.bestClean)),borderColor:'#b06cff',backgroundColor:'#b06cff',pointRadius:6,showLine:false},
   {label:'Baseline 1:49.250',data:S.map(()=>toS(J.mugello.baseline)),borderColor:'#ffb020',borderDash:[6,6],pointRadius:0},
   {label:'Цель ~1:49',data:S.map(()=>toS(J.mugello.target)),borderColor:'#3ccf6e',borderDash:[2,4],pointRadius:0}]},
   options:{maintainAspectRatio:false,scales:{y:{ticks:{callback:v=>fmt(v,1)}}},plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+fmt(c.parsed.y)}}}}})},
@@ -60,20 +62,21 @@ sectors(){if(!TM||!TM.sessions){app.innerHTML=H('Сектора')+'<div class="p
  chart(document.getElementById('c2'),{type:'bar',data:{labels:L,datasets:[0,1,2].map(k=>({label:'S'+(k+1),data:TM.sessions.map(s=>s.bestLap.sectors[k]),backgroundColor:col[k]}))},options:{maintainAspectRatio:false,scales:{y:{min:30,title:{display:true,text:'секунды'}}}}});
  const b=TM.sessions[0].bestSectors;
  chart(document.getElementById('c3'),{type:'bar',data:{labels:L.slice(1),datasets:[0,1,2].map(k=>({label:'S'+(k+1),data:TM.sessions.slice(1).map(s=>+(s.bestSectors[k]-b[k]).toFixed(3)),backgroundColor:col[k]}))},options:{maintainAspectRatio:false}})},
-corners(){const last=TM?TM.sessions[TM.sessions.length-1]:null,base=TM?TM.sessions[0]:null;
+corners(){const prev=TM?TM.sessions.find(s=>s.name.startsWith('24.10')):null,base=TM?TM.sessions[0]:null;
  const br=(s,z)=>{const a=s&&s.braking[z];return a?a.map(x=>`${x.median_m} м ±${x.sd_m} <span class="note">(${x.file.slice(5,16)}, n=${x.n})</span>`).join('<br>'):'—'};
  app.innerHTML=H('Повороты Mugello','Карточки по гайду тренера + анализ ошибок. [ориентир] — общий ориентир GT3, проверить в Test Drive с Driving Line.')+`
  <div style="display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:start"><div class="grid g2">
- ${J.corners.map(c=>`<div class="card corner ${c.inc?'acc':''}">${c.inc?`<div class="badge">${c.inc} инц.</div>`:''}<span class="t">${c.turn}</span><h3>${c.name}</h3><div class="d">${c.dir} · ${c.gear} · ${c.speed}</div>
+ ${J.corners.map(c=>`<div class="card corner ${c.inc?'acc':''}">${c.inc||c.inc2510?`<div class="badge">${c.inc?c.inc+' инц.':c.inc2510}</div>`:''}<span class="t">${c.turn}</span><h3>${c.name}</h3><div class="d">${c.dir} · ${c.gear} · ${c.speed}</div>
   <dl><dt>Торможение</dt><dd>${c.braking}</dd><dt>Ориентиры</dt><dd>${c.ref}</dd><dt>Типичная ошибка</dt><dd class="err">${c.mistake}</dd><dt>Совет</dt><dd class="adv">${c.advice}</dd>
   ${c.stability?`<dt>Стабильность</dt><dd>${c.stability}</dd>`:''}
-  ${c.tele?`<dt>Начало торможения</dt><dd class="mono" style="font-size:13px">baseline: ${br(base,c.tele)}<br>24.10: ${br(last,c.tele)}</dd>`:''}</dl></div>`).join('')}
+  ${c.brake2510?`<dt>Торможение 25.10</dt><dd class="mono" style="font-size:13px;color:#18c3b1">${c.brake2510} <span class="note">(тренер)</span></dd>`:''}${c.tele?`<dt>Ранее (ibt)</dt><dd class="mono" style="font-size:12px">baseline: ${br(base,c.tele)}<br>24.10: ${br(prev,c.tele)}</dd>`:''}</dl></div>`).join('')}
  </div><div class="card" style="position:sticky;top:20px"><img src="guides/img/mugello-map-15-turns.png" style="width:100%;background:#fff;border-radius:6px"><div class="note">Карта: Wikimedia Commons, Will Pittenger, CC BY-SA 3.0. Движение по часовой.</div>
  <h2>Как читать «начало торможения»</h2><div class="note">Медиана дистанции от старта (м) и σ точки, где тормоз > 10%, по каждому кругу из .ibt. Показано, только если в зоне ровно одно торможение на круг; иначе «—». Оценки по телеметрии грубые — для разброса на входе в S2 опирайся на цифру тренера (41 м → 12–18 м).</div></div></div>`},
 incidents(){const I=J.incidents;
  app.innerHTML=H('Инциденты','Где и почему')+`<div class="insight">${I.summary}</div>
  <div class="grid g2"><div class="chartbox" id="c4"></div><div>${I.byCorner.map(b=>`<div class="card acc" style="margin-bottom:16px"><div class="k">${b.corner} · ${b.pctLabel} инцидентов</div><div style="margin:8px 0"><b>Почему:</b> <span style="color:#ff8a6b">${b.why}</span></div><div><b>Что делать:</b> <span style="color:#8ff0e4">${b.fix}</span></div></div>`).join('')}</div></div>
  <div class="note">${I.pctNote}</div>
+ <h2>25.10.2026 — где были инциденты</h2><table><tr><th>Место</th><th>Дистанция</th><th>Круги</th><th>Кол-во</th></tr>${I.session2510.map(x=>`<tr><td>${x.where}</td><td class="n">${x.dist}</td><td>${x.laps}</td><td class="n">${x.count}</td></tr>`).join('')}</table><div class="note">${I.session2510Note}</div>
  <h2>Инциденты по сессиям (данные тренера)</h2><div class="chartbox" id="c5" style="height:280px"></div>`;
  chart(document.getElementById('c4'),{type:'bar',data:{labels:I.byCorner.map(b=>b.corner),datasets:[{label:'% инцидентов',data:I.byCorner.map(b=>b.pct),backgroundColor:['#ff4d1f','#ffb020']}]},options:{indexAxis:'y',maintainAspectRatio:false,scales:{x:{max:100,ticks:{callback:v=>v+'%'}}},plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>I.byCorner[c.dataIndex].pctLabel}}}}});
  const S=J.mugello.sessions.filter(s=>s.inc!=null);
@@ -85,8 +88,8 @@ hardware(){const h=J.hardware,t=rows=>`<table>${rows.map(r=>`<tr><td style="colo
  <div class="grid g3">${h.upgrades.map((u,i)=>`<div class="card acc"><div class="prio">${i+1}</div><div style="font-weight:700;font-size:17px;margin-bottom:6px">${u.title}</div><div class="note" style="font-size:14px">${u.text}</div></div>`).join('')}</div>
  <div class="note" style="margin-top:10px">⛔ ${h.upgradesNote}</div>
  <div class="grid g2" style="margin-top:20px"><div class="card teal"><div class="k">Угол поворота: почему 900°</div><div style="margin-top:8px">${h.rotationNote}</div></div>
- <div class="card teal"><div class="k">Напоминание по настройкам</div><div style="margin-top:8px;font-weight:600">${h.reminder}</div></div></div>
- <h2>Совет тренера по FFB</h2><div class="card acc"><ul class="list">${h.advice.map(a=>`<li>${a}</li>`).join('')}</ul></div>`},
+ <div class="card acc"><div class="k">FFB — совет тренера (не применён)</div><div style="margin-top:8px;font-weight:600">${h.reminder}</div>
+ <div style="margin-top:10px" class="warn">⚠️ На ${J.ffbStatus.date}: сила руля всё ещё ${J.ffbStatus.strengthNm} Нм, клиппинг ${J.ffbStatus.clippingPct}%.</div><div class="note">Альтернатива — Auto в iRacing.</div></div></div>`},
 guides(){app.innerHTML=H('Гайды и ссылки')+`<div class="grid g3">${J.guides.map(g=>`<a class="card teal" style="text-decoration:none;color:inherit" href="${g.url}" ${g.url.startsWith('#')?'':'target="_blank" rel="noopener"'}><div style="font-weight:700;font-size:17px">${g.name}</div><div class="note">${g.url.startsWith('#')?'Открыть в журнале':g.url}</div></a>`).join('')}</div>
  <h2>Чеклист перед сессией</h2><div class="card"><ol class="list">${J.checklist.map(c=>`<li>${c}</li>`).join('')}</ol></div>`},
 guide(){app.innerHTML=H('Гайд тренера: Mugello','Mercedes-AMG GT3 · guides/mugello-mercedes-gt3-guide.md')+'<div class="md" id="md">Загрузка…</div>';
