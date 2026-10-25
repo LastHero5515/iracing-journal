@@ -1,0 +1,1157 @@
+[
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-19 20-50-01.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 112.383,
+    "sectors": [
+     40.767,
+     32.167,
+     39.45
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 2,
+    "time": 111.617,
+    "sectors": [
+     40.567,
+     32.117,
+     38.933
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 3,
+    "time": 111.133,
+    "sectors": [
+     39.917,
+     32.217,
+     39.0
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 4,
+    "time": 111.167,
+    "sectors": [
+     40.117,
+     31.917,
+     39.133
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 5,
+    "time": 111.4,
+    "sectors": [
+     40.55,
+     31.933,
+     38.917
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 6,
+    "time": 111.267,
+    "sectors": [
+     40.633,
+     31.717,
+     38.917
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 7,
+    "time": 109.783,
+    "sectors": [
+     39.983,
+     31.283,
+     38.517
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 7,
+    "median_m": 547,
+    "sd_m": 2.1
+   },
+   "Luco": {
+    "n": 7,
+    "median_m": 892,
+    "sd_m": 2.5
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 12,
+    "median_m": 1394,
+    "sd_m": 80.9
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 7,
+    "median_m": 1846,
+    "sd_m": 2.2
+   },
+   "Casanova": {
+    "n": 7,
+    "median_m": 2907,
+    "sd_m": 2.5
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 7,
+    "median_m": 3434,
+    "sd_m": 5.5
+   },
+   "Correntaio": {
+    "n": 8,
+    "median_m": 4270,
+    "sd_m": 32.0
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-19 21-42-44.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 113.1,
+    "sectors": [
+     40.35,
+     33.783,
+     38.967
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 2,
+    "time": 110.617,
+    "sectors": [
+     40.5,
+     31.333,
+     38.783
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 3,
+    "time": 111.017,
+    "sectors": [
+     40.467,
+     31.667,
+     38.883
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 4,
+    "time": 109.25,
+    "sectors": [
+     39.567,
+     31.283,
+     38.4
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 5,
+    "time": 110.067,
+    "sectors": [
+     39.767,
+     31.433,
+     38.867
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 6,
+    "time": 110.267,
+    "sectors": [
+     39.8,
+     31.6,
+     38.867
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 7,
+    "time": 109.867,
+    "sectors": [
+     39.85,
+     31.183,
+     38.833
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 8,
+    "time": 109.883,
+    "sectors": [
+     39.883,
+     31.55,
+     38.45
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 9,
+    "time": 109.75,
+    "sectors": [
+     39.783,
+     31.517,
+     38.45
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 10,
+    "time": 110.083,
+    "sectors": [
+     39.783,
+     31.7,
+     38.6
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 11,
+    "time": 110.617,
+    "sectors": [
+     40.1,
+     31.533,
+     38.983
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 12,
+    "time": 110.367,
+    "sectors": [
+     40.4,
+     31.383,
+     38.583
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 13,
+    "time": 109.75,
+    "sectors": [
+     39.933,
+     31.267,
+     38.55
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 14,
+    "time": 110.383,
+    "sectors": [
+     40.0,
+     31.717,
+     38.667
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 14,
+    "median_m": 554,
+    "sd_m": 6.0
+   },
+   "Luco": {
+    "n": 14,
+    "median_m": 893,
+    "sd_m": 4.2
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 17,
+    "median_m": 1394,
+    "sd_m": 63.8
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 14,
+    "median_m": 1849,
+    "sd_m": 3.9
+   },
+   "Casanova": {
+    "n": 14,
+    "median_m": 2908,
+    "sd_m": 4.4
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 14,
+    "median_m": 3435,
+    "sd_m": 5.0
+   },
+   "Correntaio": {
+    "n": 14,
+    "median_m": 4274,
+    "sd_m": 5.8
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-19 23-05-31.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 112.333,
+    "sectors": [
+     40.483,
+     32.45,
+     39.4
+    ],
+    "inc": 1,
+    "valid": false
+   }
+  ],
+  "braking": {
+   "Casanova": {
+    "n": 2,
+    "median_m": 2955,
+    "sd_m": 50.3
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-19 23-26-46.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 3,
+    "time": 116.95,
+    "sectors": [
+     42.4,
+     33.55,
+     41.0
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 4,
+    "time": 116.283,
+    "sectors": [
+     42.183,
+     34.417,
+     39.683
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 5,
+    "time": 114.017,
+    "sectors": [
+     41.283,
+     33.583,
+     39.15
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 6,
+    "time": 112.8,
+    "sectors": [
+     40.533,
+     32.767,
+     39.5
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 4,
+    "median_m": 546,
+    "sd_m": 8.1
+   },
+   "Luco": {
+    "n": 4,
+    "median_m": 902,
+    "sd_m": 8.3
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 8,
+    "median_m": 1475,
+    "sd_m": 84.4
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 4,
+    "median_m": 1849,
+    "sd_m": 12.6
+   },
+   "Casanova": {
+    "n": 6,
+    "median_m": 2934,
+    "sd_m": 81.9
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 7,
+    "median_m": 3452,
+    "sd_m": 59.9
+   },
+   "Correntaio": {
+    "n": 5,
+    "median_m": 4242,
+    "sd_m": 48.5
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-20 23-55-13.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 115.0,
+    "sectors": [
+     41.7,
+     33.083,
+     40.217
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 2,
+    "time": 115.033,
+    "sectors": [
+     41.367,
+     33.317,
+     40.35
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 3,
+    "time": 114.467,
+    "sectors": [
+     42.0,
+     33.35,
+     39.117
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 4,
+    "time": 113.35,
+    "sectors": [
+     41.0,
+     32.8,
+     39.55
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 5,
+    "time": 114.017,
+    "sectors": [
+     40.45,
+     32.983,
+     40.583
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 6,
+    "time": 114.733,
+    "sectors": [
+     41.717,
+     33.333,
+     39.683
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 7,
+    "time": 115.05,
+    "sectors": [
+     41.317,
+     33.633,
+     40.1
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 7,
+    "median_m": 558,
+    "sd_m": 12.8
+   },
+   "Luco": {
+    "n": 7,
+    "median_m": 901,
+    "sd_m": 2.2
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 14,
+    "median_m": 1473,
+    "sd_m": 81.5
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 8,
+    "median_m": 1852,
+    "sd_m": 26.0
+   },
+   "Casanova": {
+    "n": 10,
+    "median_m": 2925,
+    "sd_m": 82.7
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 10,
+    "median_m": 3425,
+    "sd_m": 60.0
+   },
+   "Correntaio": {
+    "n": 7,
+    "median_m": 4251,
+    "sd_m": 21.2
+   },
+   "Poggio Secco": {
+    "n": 2,
+    "median_m": 1033,
+    "sd_m": 2.5
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-23 22-56-58.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 115.5,
+    "sectors": [
+     42.067,
+     34.483,
+     38.95
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 2,
+    "time": 113.967,
+    "sectors": [
+     40.767,
+     33.183,
+     40.017
+    ],
+    "inc": 2,
+    "valid": false
+   },
+   {
+    "lap": 3,
+    "time": 113.417,
+    "sectors": [
+     40.883,
+     33.35,
+     39.183
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 4,
+    "time": 112.467,
+    "sectors": [
+     40.467,
+     32.933,
+     39.067
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 5,
+    "time": 111.967,
+    "sectors": [
+     40.367,
+     32.517,
+     39.083
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 5,
+    "median_m": 549,
+    "sd_m": 7.5
+   },
+   "Luco": {
+    "n": 5,
+    "median_m": 898,
+    "sd_m": 4.4
+   },
+   "Poggio Secco": {
+    "n": 4,
+    "median_m": 1034,
+    "sd_m": 16.3
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 10,
+    "median_m": 1481,
+    "sd_m": 77.0
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 8,
+    "median_m": 1861,
+    "sd_m": 34.5
+   },
+   "Casanova": {
+    "n": 9,
+    "median_m": 2934,
+    "sd_m": 85.5
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 6,
+    "median_m": 3427,
+    "sd_m": 15.9
+   },
+   "Correntaio": {
+    "n": 7,
+    "median_m": 4281,
+    "sd_m": 51.0
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 22-50-13.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 118.767,
+    "sectors": [
+     43.217,
+     34.867,
+     40.683
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 2,
+    "time": 115.017,
+    "sectors": [
+     42.0,
+     33.433,
+     39.583
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 3,
+    "time": 115.967,
+    "sectors": [
+     41.617,
+     34.45,
+     39.9
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 4,
+    "time": 115.0,
+    "sectors": [
+     41.5,
+     34.483,
+     39.017
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 5,
+    "time": 114.167,
+    "sectors": [
+     41.183,
+     33.683,
+     39.3
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 6,
+    "time": 116.3,
+    "sectors": [
+     42.267,
+     34.283,
+     39.75
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 7,
+    "time": 114.317,
+    "sectors": [
+     41.467,
+     33.683,
+     39.167
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 8,
+    "time": 114.017,
+    "sectors": [
+     41.383,
+     33.9,
+     38.733
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 9,
+    "time": 113.117,
+    "sectors": [
+     40.983,
+     33.533,
+     38.6
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 10,
+    "time": 113.683,
+    "sectors": [
+     41.017,
+     33.617,
+     39.05
+    ],
+    "inc": 1,
+    "valid": false
+   },
+   {
+    "lap": 11,
+    "time": 113.117,
+    "sectors": [
+     41.083,
+     32.983,
+     39.05
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 12,
+    "time": 113.217,
+    "sectors": [
+     41.117,
+     33.1,
+     39.0
+    ],
+    "inc": 1,
+    "valid": false
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 12,
+    "median_m": 543,
+    "sd_m": 14.4
+   },
+   "Luco": {
+    "n": 12,
+    "median_m": 898,
+    "sd_m": 4.1
+   },
+   "Poggio Secco": {
+    "n": 9,
+    "median_m": 1028,
+    "sd_m": 16.2
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 24,
+    "median_m": 1475,
+    "sd_m": 81.1
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 16,
+    "median_m": 1842,
+    "sd_m": 46.4
+   },
+   "Casanova": {
+    "n": 23,
+    "median_m": 2936,
+    "sd_m": 86.3
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 18,
+    "median_m": 3441,
+    "sd_m": 57.3
+   },
+   "Correntaio": {
+    "n": 17,
+    "median_m": 4275,
+    "sd_m": 60.5
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-26-32.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [],
+  "braking": {}
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-29-29.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [],
+  "braking": {}
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-33-55.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 14,
+    "time": 114.4,
+    "sectors": [
+     41.883,
+     33.617,
+     38.9
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 15,
+    "time": 112.983,
+    "sectors": [
+     40.583,
+     33.117,
+     39.283
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 16,
+    "time": 111.35,
+    "sectors": [
+     40.483,
+     32.35,
+     38.517
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 17,
+    "time": 110.95,
+    "sectors": [
+     39.667,
+     32.7,
+     38.583
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 18,
+    "time": 111.3,
+    "sectors": [
+     40.65,
+     32.283,
+     38.367
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 19,
+    "time": 113.317,
+    "sectors": [
+     40.517,
+     34.167,
+     38.633
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 6,
+    "median_m": 544,
+    "sd_m": 15.0
+   },
+   "Luco": {
+    "n": 6,
+    "median_m": 897,
+    "sd_m": 3.6
+   },
+   "Poggio Secco": {
+    "n": 4,
+    "median_m": 1030,
+    "sd_m": 3.6
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 12,
+    "median_m": 1472,
+    "sd_m": 80.2
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 9,
+    "median_m": 1845,
+    "sd_m": 23.0
+   },
+   "Casanova": {
+    "n": 11,
+    "median_m": 2936,
+    "sd_m": 85.6
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 7,
+    "median_m": 3445,
+    "sd_m": 34.4
+   },
+   "Correntaio": {
+    "n": 6,
+    "median_m": 4273,
+    "sd_m": 9.4
+   }
+  }
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-52-27.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [],
+  "braking": {}
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-52-46.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [],
+  "braking": {}
+ },
+ {
+  "file": "mercedesamgevogt3_mugello gp 2026-10-24 23-55-26.ibt",
+  "sessionType": "Offline Testing",
+  "trackLen": 5191.4,
+  "sectorStarts": [
+   0.0,
+   0.356625,
+   0.644156
+  ],
+  "laps": [
+   {
+    "lap": 1,
+    "time": 113.583,
+    "sectors": [
+     41.283,
+     33.1,
+     39.2
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 2,
+    "time": 112.067,
+    "sectors": [
+     40.883,
+     32.467,
+     38.717
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 3,
+    "time": 111.883,
+    "sectors": [
+     40.55,
+     32.833,
+     38.5
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 4,
+    "time": 111.483,
+    "sectors": [
+     40.783,
+     32.267,
+     38.433
+    ],
+    "inc": 0,
+    "valid": true
+   },
+   {
+    "lap": 5,
+    "time": 112.1,
+    "sectors": [
+     40.4,
+     32.65,
+     39.05
+    ],
+    "inc": 0,
+    "valid": true
+   }
+  ],
+  "braking": {
+   "San Donato": {
+    "n": 5,
+    "median_m": 543,
+    "sd_m": 9.5
+   },
+   "Luco": {
+    "n": 5,
+    "median_m": 888,
+    "sd_m": 6.0
+   },
+   "Materassi/Borgo San Lorenzo": {
+    "n": 11,
+    "median_m": 1427,
+    "sd_m": 80.1
+   },
+   "Вход в S2 (Casanova-Savelli)": {
+    "n": 6,
+    "median_m": 1849,
+    "sd_m": 18.7
+   },
+   "Casanova": {
+    "n": 9,
+    "median_m": 2936,
+    "sd_m": 77.7
+   },
+   "Arrabbiata 2 / Scarperia": {
+    "n": 5,
+    "median_m": 3437,
+    "sd_m": 16.0
+   },
+   "Correntaio": {
+    "n": 6,
+    "median_m": 4262,
+    "sd_m": 54.4
+   },
+   "Poggio Secco": {
+    "n": 3,
+    "median_m": 1028,
+    "sd_m": 7.7
+   }
+  }
+ }
+]
