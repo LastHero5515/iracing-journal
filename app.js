@@ -81,6 +81,11 @@ incidents(){const I=J.incidents;
 hardware(){const h=J.hardware,t=rows=>`<table>${rows.map(r=>`<tr><td style="color:#8b95a3;width:40%">${r[0]}</td><td>${r[1]}</td></tr>`).join('')}</table>`;
  app.innerHTML=H('Железо и настройки')+`<div class="grid g2"><div><h2>ПК</h2>${t(h.pc)}</div><div><h2>MOZA</h2>${t(h.moza)}</div></div>
  <h2>Настройки руля</h2><table><tr><th>Параметр</th><th>Сейчас</th><th>Было</th></tr>${h.settings.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td class="note">${r[2]}</td></tr>`).join('')}</table>
+ <h2>Апгрейды MOZA — по порядку <span class="note" style="letter-spacing:0;text-transform:none">совет тренера от ${h.upgradesDate}</span></h2>
+ <div class="grid g3">${h.upgrades.map((u,i)=>`<div class="card acc"><div class="prio">${i+1}</div><div style="font-weight:700;font-size:17px;margin-bottom:6px">${u.title}</div><div class="note" style="font-size:14px">${u.text}</div></div>`).join('')}</div>
+ <div class="note" style="margin-top:10px">⛔ ${h.upgradesNote}</div>
+ <div class="grid g2" style="margin-top:20px"><div class="card teal"><div class="k">Угол поворота: почему 900°</div><div style="margin-top:8px">${h.rotationNote}</div></div>
+ <div class="card teal"><div class="k">Напоминание по настройкам</div><div style="margin-top:8px;font-weight:600">${h.reminder}</div></div></div>
  <h2>Совет тренера по FFB</h2><div class="card acc"><ul class="list">${h.advice.map(a=>`<li>${a}</li>`).join('')}</ul></div>`},
 guides(){app.innerHTML=H('Гайды и ссылки')+`<div class="grid g3">${J.guides.map(g=>`<a class="card teal" style="text-decoration:none;color:inherit" href="${g.url}" ${g.url.startsWith('#')?'':'target="_blank" rel="noopener"'}><div style="font-weight:700;font-size:17px">${g.name}</div><div class="note">${g.url.startsWith('#')?'Открыть в журнале':g.url}</div></a>`).join('')}</div>
  <h2>Чеклист перед сессией</h2><div class="card"><ol class="list">${J.checklist.map(c=>`<li>${c}</li>`).join('')}</ol></div>`},
@@ -99,4 +104,5 @@ function lapTables(){if(!TM)return'<div class="ph">Данные появятся
  <table style="margin-top:10px"><tr><th>Файл</th><th>Круг</th><th>Время</th><th>S1</th><th>S2</th><th>S3</th><th>Инц.</th><th>Статус</th></tr>
  ${s.laps.map(l=>`<tr class="${l.time===b?'best':''}"><td class="note">${l.file}</td><td class="n">${l.lap}</td><td class="n">${fmt(l.time)}</td>${l.sectors.map(x=>`<td class="n">${x.toFixed(3)}</td>`).join('')}<td class="n">${l.inc}</td><td><span class="tag ${l.valid?'ok':'bad'}">${l.valid?'чистый':'инцидент'}</span></td></tr>`).join('')}</table></details>`}).join('')+
  '<div class="note">Из телеметрии: только полные круги без пит-лейна. «Инцидент» = счётчик инцидентов вырос за круг. Средние/σ в таблице выше — от тренера (по его выборке чистых кругов).</div>'}
+document.querySelector('.side-foot').innerHTML='Обновлено: '+(J.updated||'—')+'<br>'+document.querySelector('.side-foot').innerHTML;
 route();

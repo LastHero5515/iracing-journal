@@ -1,5 +1,6 @@
 // Основные данные журнала. Редактируй этот файл, чтобы обновить сайт. Время круга — строки "м:сс.ммм".
 window.JOURNAL = {
+  updated: "25.10.2026",
   driver: { name: "Артём", sim: "iRacing (Steam)", simNote: "Пробовал ACC — не понравился." },
   car: "Mercedes-AMG GT3 Evo",
   series: "GT3 Regional Tour Europe (Fixed)",
@@ -103,7 +104,16 @@ window.JOURNAL = {
       ["Natural Damping","25","было 45"],
       ["FFB клиппинг","40–50%","iRacing Strength было 15, затем 12 Нм"]
     ],
-    advice: ["iRacing Strength: 28–30 Нм или Auto", "Pit House: «Выходная мощность» → «Полный»"]
+    advice: ["iRacing Strength: 28–30 Нм или Auto", "Pit House: «Выходная мощность» → «Полный»"],
+    upgradesDate: "25.10.2026",
+    upgrades: [ // что докупить у MOZA, по порядку
+      { title: "База R5 (~5,5 Нм) или R9 (~9 Нм) вместо R3 (~3,9 Нм)", text: "Самый заметный прирост. Руль KS Pro и педали SRP2 подходят без изменений." },
+      { title: "Педали CRP2", text: "Позже, если нужен более жёсткий и точный тормоз." },
+      { title: "Кокпит MOZA", text: "Если всё стоит на столе." }
+    ],
+    upgradesNote: "Шифтер и ручник для GT3 не нужны.",
+    rotationNote: "540° или 900° — это ход самого руля, а не колёс. У Mercedes GT3 руль в машине 870°. При 540 руль крутится 1:1, но до полного выворота колёс не докручивается. Поэтому оставляем 900 с синхронизацией.",
+    reminder: "Сила руля в iRacing 28–30 Нм, в Pit House «Выходная мощность» = «Полный»."
   },
   guides: [
     { name: "Track Titan — Mercedes GT3: Mugello, Imola, Red Bull Ring, Silverstone", url: "https://www.tracktitan.io" },
