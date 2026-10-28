@@ -8,6 +8,13 @@ window.TELEMETRY = {
  "trackLen_m": 5191.4,
  "sessions": [
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "19.10 — с Driving Line (baseline)",
    "drivingLine": true,
    "laps": [
@@ -364,6 +371,13 @@ window.TELEMETRY = {
    }
   },
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "19.10 — без линии",
    "drivingLine": false,
    "laps": [
@@ -474,6 +488,13 @@ window.TELEMETRY = {
    }
   },
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "20.10 — без линии",
    "drivingLine": false,
    "laps": [
@@ -616,6 +637,13 @@ window.TELEMETRY = {
    }
   },
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "23.10 — без линии",
    "drivingLine": false,
    "laps": [
@@ -726,6 +754,13 @@ window.TELEMETRY = {
    }
   },
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "24.10 — без линии",
    "drivingLine": false,
    "laps": [
@@ -1104,6 +1139,13 @@ window.TELEMETRY = {
    }
   },
   {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
    "name": "25.10 — без линии (вероятно)",
    "drivingLine": false,
    "laps": [
@@ -1249,6 +1291,332 @@ window.TELEMETRY = {
       "median_m": 1035,
       "sd_m": 5.5,
       "file": "2026-10-25 22-16-23"
+     }
+    ]
+   }
+  },
+  {
+   "track": "Mugello",
+   "sectorStarts": [
+    0.0,
+    0.356625,
+    0.644156
+   ],
+   "trackLen_m": 5191.4,
+   "name": "28.10 — без линии (вероятно)",
+   "drivingLine": false,
+   "laps": [
+    {
+     "lap": 1,
+     "time": 113.917,
+     "sectors": [
+      41.65,
+      33.133,
+      39.133
+     ],
+     "inc": 1,
+     "valid": false,
+     "file": "2026-10-28 20-11-24"
+    },
+    {
+     "lap": 2,
+     "time": 113.4,
+     "sectors": [
+      40.95,
+      33.367,
+      39.083
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-11-24"
+    },
+    {
+     "lap": 3,
+     "time": 113.3,
+     "sectors": [
+      40.733,
+      33.067,
+      39.5
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-11-24"
+    },
+    {
+     "lap": 4,
+     "time": 112.217,
+     "sectors": [
+      40.533,
+      32.75,
+      38.933
+     ],
+     "inc": 1,
+     "valid": false,
+     "file": "2026-10-28 20-11-24"
+    },
+    {
+     "lap": 5,
+     "time": 111.7,
+     "sectors": [
+      40.283,
+      32.85,
+      38.567
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-11-24"
+    }
+   ],
+   "bestLap": {
+    "lap": 5,
+    "time": 111.7,
+    "sectors": [
+     40.283,
+     32.85,
+     38.567
+    ],
+    "inc": 0,
+    "valid": true,
+    "file": "2026-10-28 20-11-24"
+   },
+   "bestSectors": [
+    40.283,
+    32.75,
+    38.567
+   ],
+   "ideal": 111.6,
+   "braking": {
+    "San Donato": [
+     {
+      "n": 5,
+      "median_m": 559,
+      "sd_m": 6.0,
+      "file": "2026-10-28 20-11-24"
+     }
+    ],
+    "Luco": [
+     {
+      "n": 5,
+      "median_m": 899,
+      "sd_m": 9.0,
+      "file": "2026-10-28 20-11-24"
+     }
+    ],
+    "Poggio Secco": [
+     {
+      "n": 3,
+      "median_m": 1030,
+      "sd_m": 3.0,
+      "file": "2026-10-28 20-11-24"
+     }
+    ],
+    "Correntaio": [
+     {
+      "n": 5,
+      "median_m": 4259,
+      "sd_m": 6.2,
+      "file": "2026-10-28 20-11-24"
+     }
+    ]
+   }
+  },
+  {
+   "track": "Red Bull Ring",
+   "sectorStarts": [
+    0.0,
+    0.271918,
+    0.668198
+   ],
+   "trackLen_m": 4283.400000000001,
+   "name": "28.10 — без линии (вероятно)",
+   "drivingLine": false,
+   "laps": [
+    {
+     "lap": 1,
+     "time": 95.417,
+     "sectors": [
+      22.783,
+      41.767,
+      30.867
+     ],
+     "inc": 1,
+     "valid": false,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 2,
+     "time": 94.683,
+     "sectors": [
+      22.667,
+      41.2,
+      30.817
+     ],
+     "inc": 1,
+     "valid": false,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 3,
+     "time": 94.65,
+     "sectors": [
+      23.3,
+      41.033,
+      30.317
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 4,
+     "time": 95.8,
+     "sectors": [
+      22.7,
+      43.0,
+      30.1
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 5,
+     "time": 93.5,
+     "sectors": [
+      22.817,
+      40.45,
+      30.233
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 6,
+     "time": 93.8,
+     "sectors": [
+      23.017,
+      40.25,
+      30.533
+     ],
+     "inc": 1,
+     "valid": false,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 7,
+     "time": 94.167,
+     "sectors": [
+      22.917,
+      40.917,
+      30.333
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 8,
+     "time": 93.667,
+     "sectors": [
+      22.683,
+      40.25,
+      30.733
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 9,
+     "time": 94.283,
+     "sectors": [
+      23.0,
+      41.083,
+      30.2
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 10,
+     "time": 93.817,
+     "sectors": [
+      22.983,
+      40.083,
+      30.75
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 11,
+     "time": 94.233,
+     "sectors": [
+      22.8,
+      40.683,
+      30.75
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    },
+    {
+     "lap": 12,
+     "time": 92.533,
+     "sectors": [
+      22.45,
+      40.033,
+      30.05
+     ],
+     "inc": 0,
+     "valid": true,
+     "file": "2026-10-28 20-26-34"
+    }
+   ],
+   "bestLap": {
+    "lap": 12,
+    "time": 92.533,
+    "sectors": [
+     22.45,
+     40.033,
+     30.05
+    ],
+    "inc": 0,
+    "valid": true,
+    "file": "2026-10-28 20-26-34"
+   },
+   "bestSectors": [
+    22.45,
+    40.033,
+    30.05
+   ],
+   "ideal": 92.533,
+   "braking": {
+    "Materassi/Borgo San Lorenzo": [
+     {
+      "n": 12,
+      "median_m": 1254,
+      "sd_m": 3.9,
+      "file": "2026-10-28 20-26-34"
+     }
+    ],
+    "Correntaio": [
+     {
+      "n": 12,
+      "median_m": 3628,
+      "sd_m": 8.7,
+      "file": "2026-10-28 20-26-34"
+     }
+    ],
+    "Casanova": [
+     {
+      "n": 9,
+      "median_m": 2566,
+      "sd_m": 2.9,
+      "file": "2026-10-28 20-26-34"
      }
     ]
    }
